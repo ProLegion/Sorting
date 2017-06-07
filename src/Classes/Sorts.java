@@ -7,6 +7,7 @@ import java.util.ArrayList;
  * @author canto5684
  */
 public class Sorts {
+
     /**
      * Sorts an array of integer from low to high pre: none post: Integers have
      * been sorted from low to high
@@ -139,9 +140,8 @@ public class Sorts {
     }
 
     /**
-     * Sorts items[start..end]
-     * pre: start > 0, end > 0
-     * post: items[start..end] is sorted low to high
+     * Sorts items[start..end] pre: start > 0, end > 0 post: items[start..end]
+     * is sorted low to high
      */
     public static void mergesort(int[] items, int start, int end) {
         if (start < end) {
@@ -153,9 +153,9 @@ public class Sorts {
     }
 
     /**
-     * Merges two sorted portion of items array
-     * pre: items[start..mid] is sorted. items[mid+1..end] sorted. start <= mid <= end
-     * post: items[start..end] is sorted.
+     * Merges two sorted portion of items array pre: items[start..mid] is
+     * sorted. items[mid+1..end] sorted. start <= mid <= end post:
+     * items[start..end] is sorted.
      */
     private static void merge(int[] items, int start, int mid, int end) {
         int[] temp = new int[items.length];
@@ -177,11 +177,10 @@ public class Sorts {
             items[i] = temp[i];
         }
     }
-    
+
     /**
-     * Sorts items[start..end]
-     * pre: start > 0, end > 0
-     * post: items[start..end] is sorted low to high
+     * Sorts items[start..end] pre: start > 0, end > 0 post: items[start..end]
+     * is sorted low to high
      */
     public static void mergesort(Comparable[] items, int start, int end) {
         if (start < end) {
@@ -193,9 +192,9 @@ public class Sorts {
     }
 
     /**
-     * Merges two sorted portion of items array
-     * pre: items[start..mid] is sorted. items[mid+1..end] sorted. start <= mid <= end
-     * post: items[start..end] is sorted.
+     * Merges two sorted portion of items array pre: items[start..mid] is
+     * sorted. items[mid+1..end] sorted. start <= mid <= end post:
+     * items[start..end] is sorted.
      */
     private static void merge(Comparable[] items, int start, int mid, int end) {
         Comparable[] temp = new Comparable[items.length];
@@ -217,11 +216,10 @@ public class Sorts {
             items[i] = temp[i];
         }
     }
-    
+
     /**
-     * Sorts items[start..end]
-     * pre: start > 0, end > 0
-     * post: items[start..end] is sorted low to high
+     * Sorts items[start..end] pre: start > 0, end > 0 post: items[start..end]
+     * is sorted low to high
      */
     public static void mergesort(ArrayList<Comparable> items, int start, int end) {
         if (start < end) {
@@ -233,9 +231,9 @@ public class Sorts {
     }
 
     /**
-     * Merges two sorted portion of items array
-     * pre: items[start..mid] is sorted. items[mid+1..end] sorted. start <= mid <= end
-     * post: items[start..end] is sorted.
+     * Merges two sorted portion of items array pre: items[start..mid] is
+     * sorted. items[mid+1..end] sorted. start <= mid <= end post:
+     * items[start..end] is sorted.
      */
     private static void merge(ArrayList<Comparable> items, int start, int mid, int end) {
         Comparable[] temp = new Comparable[items.size()];
@@ -256,5 +254,7 @@ public class Sorts {
         for (int i = start; i <= end; i++) {
             items.set(i, temp[i]);
         }
-    }    
+    }
+
+    
 }
